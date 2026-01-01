@@ -1,0 +1,25 @@
+#!/bin/bash
+#BSUB -J spot-test
+#BSUB -q gpu100
+#BSUB -gpu "num=1"
+#BSUB -n 4
+#BSUB -W 04:00
+#BSUB -R "rusage[mem=16GB]"
+#BSUB -o logs/test_e2e_%J.out
+#BSUB -e logs/test_e2e_%J.err
+
+set -euo pipefail
+
+# Adjust these paths/modules to match your DTU setup
+module load python/3.9.13 cuda/12.1 || true
+source "${HOME}/.virtualenvs/spot/bin/activate"
+
+cd "${LS_SUBCWD}"
+mkdir -p logs
+
+python3 test_e2e.py \
+  pretrained/soccernet_rgb \
+  frames/custom \
+  -s test \
+  --save \
+  -d soccernetv2
