@@ -55,6 +55,11 @@ class FrameReader:
             frame_path = os.path.join(
                 self._frame_dir, video_name,
                 FrameReader.IMG_NAME.format(frame_num))
+            # if frame_num %
+            if frame_num % 10 == 0:
+                print(f"DEBUG: Attempting to load: {frame_path}")
+
+
             try:
                 img = self.read_frame(frame_path)
                 if self._crop_transform:
@@ -390,6 +395,8 @@ class ActionSpotDataset(Dataset):
             video_meta, base_idx = self._sample_uniform()
 
         labels = np.zeros(self._clip_len, np.int64)
+        # labels = np.zeros(self._clip_len, dtype=int)
+
         for event in video_meta['events']:
             event_frame = event['frame']
 
@@ -512,7 +519,9 @@ class ActionSpotVideoDataset(Dataset):
         num_labels = num_frames // self._stride
         if num_frames % self._stride != 0:
             num_labels += 1
-        labels = np.zeros(num_labels, np.int)
+        # labels = np.zeros(num_labels, np.int)
+        labels = np.zeros(num_labels, dtype=int)
+
         for event in meta['events']:
             frame = event['frame']
             if frame < num_frames:

@@ -29,7 +29,7 @@ from util.score import compute_mAPs
 
 EPOCH_NUM_FRAMES = 500000
 
-BASE_NUM_WORKERS = 4
+BASE_NUM_WORKERS = 0
 
 BASE_NUM_VAL_EPOCHS = 20
 
@@ -225,7 +225,7 @@ class E2EModel(BaseRGBModel):
                 sum(p.numel() for p in self._pred_fine.parameters()))
 
     def __init__(self, num_classes, feature_arch, temporal_arch, clip_len,
-                 modality, device='cuda', multi_gpu=False):
+                 modality, device='cpu', multi_gpu=False):
         self.device = device
         self._multi_gpu = multi_gpu
         self._model = E2EModel.Impl(
@@ -353,9 +353,12 @@ def evaluate(model, dataset, split, classes, save_pred, calc_stats=True,
 
             scores[start:end, :] += np.sum(pred_scores, axis=0)
             support[start:end] += pred_scores.shape[0]
+    if calc_stats:
+        err, f1, pred_events, pred_events_high_recall, pred_scores = \
+            process_frame_predictions(dataset, classes, pred_dict)
+    
+    
 
-    err, f1, pred_events, pred_events_high_recall, pred_scores = \
-        process_frame_predictions(dataset, classes, pred_dict)
 
     avg_mAP = None
     if calc_stats:
@@ -375,11 +378,41 @@ def evaluate(model, dataset, split, classes, save_pred, calc_stats=True,
         mAPs, _ = compute_mAPs(dataset.labels, pred_events_high_recall)
         avg_mAP = np.mean(mAPs[1:])
 
+    # if save_pred is not None:
+    #     store_json(save_pred + '.json', pred_events)
+    #     store_gz_json(save_pred + '.recall.json.gz', pred_events_high_recall)
+    #     if save_scores:
+    #         store_gz_json(save_pred + '.score.json.gz', pred_scores)
     if save_pred is not None:
-        store_json(save_pred + '.json', pred_events)
-        store_gz_json(save_pred + '.recall.json.gz', pred_events_high_recall)
-        if save_scores:
-            store_gz_json(save_pred + '.score.json.gz', pred_scores)
+        import pickle
+        out_path = save_pred + ".frame.pkl"
+        with open(out_path, "wb") as f:
+            pickle.dump(pred_dict, f, protocol=pickle.HIGHEST_PROTOCOL)
+        print("Saved frame predictions:", out_path)
+
+
+    # if save_pred is not None:
+    #     # Always save raw frame predictions
+    #     # store_json(save_pred + '.frame.json', pred_dict)
+
+    #     # import numpy as np
+    #     # np.savez_compressed(save_pred + '.frame.npz', **pred_dict)
+    #     import pickle
+
+    #     with open(save_pred + ".frame.pkl", "wb") as f:
+    #         pickle.dump(pred_dict, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+    #     print("Saved frame predictions:", save_pred + ".frame.pkl")
+
+    #     # print("Saved frame predictions:", save_pred + ".frame.npz")
+
+
+    #     # Only save event lists if we computed them
+    #     if calc_stats:
+    #         store_json(save_pred + '.json', pred_events)
+    #         store_json(save_pred + '.high_recall.json', pred_events_high_recall)
+    #         store_json(save_pred + '.scores.json', pred_scores)
+
     return avg_mAP
 
 

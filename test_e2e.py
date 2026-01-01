@@ -75,8 +75,12 @@ def main(model_dir, frame_dir, split, no_overlap, save, save_as, dataset):
         len(classes) + 1, config['feature_arch'], config['temporal_arch'],
         clip_len=config['clip_len'], modality=config['modality'],
         multi_gpu=config['gpu_parallel'])
-    model.load(torch.load(os.path.join(
-        model_dir, 'checkpoint_{:03d}.pt'.format(best_epoch))))
+    # model.load(torch.load(os.path.join(
+    #     model_dir, 'checkpoint_{:03d}.pt'.format(best_epoch))))
+    ckpt_path = os.path.join(model_dir, 'checkpoint_{:03d}.pt'.format(best_epoch))
+    state = torch.load(ckpt_path, map_location=torch.device('cpu'))
+    model.load(state)
+
 
     split_path = os.path.join('data', dataset, '{}.json'.format(split))
     split_data = ActionSpotVideoDataset(
