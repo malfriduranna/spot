@@ -11,7 +11,7 @@
 set -euo pipefail
 
 # Adjust these paths/modules to match your DTU setup
-module load python/3.9.13 cuda/12.1 || true
+module load python/3.9.19 cuda/12.1 || true
 source "${HOME}/.virtualenvs/spot/bin/activate"
 
 cd "${LS_SUBCWD}"
