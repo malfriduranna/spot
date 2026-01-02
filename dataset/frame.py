@@ -84,6 +84,11 @@ class FrameReader:
                 # print('Missing file!', frame_path)
                 n_pad_end += 1
 
+        if not ret:
+            raise RuntimeError(
+                'Failed to load any frames for {} [{}:{}]'.format(
+                    video_name, start, end))
+
         # In the multicrop case, the shape is (B, T, C, H, W)
         ret = torch.stack(ret, dim=int(len(ret[0].shape) == 4))
         if self._same_transform:
