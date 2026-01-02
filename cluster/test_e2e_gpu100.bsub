@@ -20,14 +20,7 @@ module load python3/3.9.19 2>/dev/null || {
 module load cuda/12.1 || true
 
 VENV_PATH="${HOME}/.virtualenvs/spot"
-if [ ! -d "${VENV_PATH}" ]; then
-    python3 -m venv "${VENV_PATH}"
-    source "${VENV_PATH}/bin/activate"
-    pip install --upgrade pip
-    pip install -r requirements.txt
-else
-    source "${VENV_PATH}/bin/activate"
-fi
+source "${VENV_PATH}/bin/activate"
 # === End environment setup ===
 
 python3 test_e2e.py \
