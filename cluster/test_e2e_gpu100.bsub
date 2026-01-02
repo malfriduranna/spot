@@ -25,7 +25,7 @@ source "${VENV_PATH}/bin/activate"
 
 python3 test_e2e.py \
   pretrained/soccernet_rgb \
-  frames/custom \
+  frames/short_5fps \
   -s test \
   --save \
   -d soccernetv2
