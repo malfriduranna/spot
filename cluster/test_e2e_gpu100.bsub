@@ -1,6 +1,6 @@
 #!/bin/bash
 #BSUB -J spot-test
-#BSUB -q gpuv100
+#BSUB -q gpua100
 #BSUB -gpu "num=1"
 #BSUB -n 4
 #BSUB -W 04:00
