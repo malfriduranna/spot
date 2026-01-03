@@ -78,11 +78,17 @@ def main():
     with open(args.class_file) as fp:
         valid_classes = {line.strip() for line in fp if line.strip()}
 
+    alias_map = {
+        "Shots on target": "Shot on target",
+        "Shots off target": "Shot off target",
+    }
+
     events = []
     unknown_labels = set()
     spotting = load_spotting_events(args.label_file)
     for entry in spotting:
         label = entry.get("label", "Unknown").strip()
+        label = alias_map.get(label, label)
         if label not in valid_classes:
             unknown_labels.add(label)
             continue
