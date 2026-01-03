@@ -1,6 +1,13 @@
-__pycache__
-.vscode
-work_dirvideos/
-videos/
+# macOS / Python
+.DS_Store
+.venv/
+
+# generated artifacts
 frames/
 logs/
+
+# keep videos out of git by default
+videos/
+
+# (optional) allow this one tracked video path to exist without showing as ignored
+!videos/full_match_trimmed2.mp4
