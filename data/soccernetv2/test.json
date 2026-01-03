@@ -1,7 +1,7 @@
 [
   {
-    "video": "full_match_5fps",
-    "num_frames": 11151,
+    "video": "full_match_trimmed2_5fps",
+    "num_frames": 0,
     "fps": 5,
     "events": []
   }
