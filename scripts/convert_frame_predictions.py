@@ -4,6 +4,12 @@
 import argparse
 import numpy as np
 import pickle
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from dataset.frame import ActionSpotVideoDataset
 from util.dataset import load_classes
