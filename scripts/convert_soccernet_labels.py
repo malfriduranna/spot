@@ -34,6 +34,11 @@ def parse_args():
         help="Duration (in seconds) assumed for each half",
     )
     parser.add_argument(
+        "--class-file",
+        default="data/soccernetv2/class.txt",
+        help="Text file listing valid class names",
+    )
+    parser.add_argument(
         "--output",
         default="data/soccernetv2/test.json",
         help="Destination JSON file to overwrite",
@@ -44,16 +49,19 @@ def parse_args():
 def load_spotting_events(label_file):
     with open(label_file) as fp:
         data = json.load(fp)
-    annotations = data.get("annotations", {})
-    events = annotations.get("spotting") or annotations.get("events") or []
-    return events
+    annotations = data.get("annotations")
+    if isinstance(annotations, list):
+        return annotations
+    if isinstance(annotations, dict):
+        return annotations.get("spotting") or annotations.get("events") or []
+    return []
 
 
 def game_time_to_seconds(entry):
     game_time = entry.get("gameTime")
     if not game_time:
-        return entry.get("position", 0.0), int(entry.get("half", 1))
-    half_str, clock = [x.strip() for x in game_time.split("-")]
+        return float(entry.get("position", 0.0)), int(entry.get("half", 1))
+    half_str, clock = [x.strip() for x in game_time.split("-", 1)]
     half = int(half_str)
     minute, second = clock.split(":")
     return int(minute) * 60 + float(second), half
@@ -67,16 +75,25 @@ def main():
         raise FileNotFoundError(f"No frames found in {frame_dir}")
     num_frames = len(frames)
 
+    with open(args.class_file) as fp:
+        valid_classes = {line.strip() for line in fp if line.strip()}
+
     events = []
+    unknown_labels = set()
     spotting = load_spotting_events(args.label_file)
     for entry in spotting:
+        label = entry.get("label", "Unknown").strip()
+        if label not in valid_classes:
+            unknown_labels.add(label)
+            continue
+
         pos_in_half, half = game_time_to_seconds(entry)
         global_time = (half - 1) * args.half_duration + pos_in_half
         frame = int(round(global_time * args.fps))
         events.append(
             {
                 "frame": frame,
-                "label": entry.get("label", "Unknown"),
+                "label": label,
                 "score": float(entry.get("confidence", entry.get("score", 1.0))),
             }
         )
@@ -90,6 +107,8 @@ def main():
 
     Path(args.output).write_text(json.dumps([output_entry], indent=2))
     print(f"Wrote {len(events)} events to {args.output}")
+    if unknown_labels:
+        print("Skipped labels not in class list:", ", ".join(sorted(unknown_labels)))
 
 
 if __name__ == "__main__":
