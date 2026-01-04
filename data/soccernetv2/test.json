@@ -1,8 +1,1791 @@
 [
   {
-    "video": "full_match_trimmed2_5fps",
-    "num_frames": 0,
-    "fps": 5,
-    "events": []
+    "video": "arsenal_liverpool_224p_5fps",
+    "num_frames": 27589,
+    "fps": 5.0,
+    "events": [
+      {
+        "frame": 0,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 150,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 225,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 370,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 405,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 530,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 790,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1025,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 1145,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 1450,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1660,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1765,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1920,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1955,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1985,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 2930,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 3200,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 3495,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 3600,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 3730,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 4235,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 4605,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 4770,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 4905,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 5135,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 5175,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 5515,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 5595,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 6100,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 6170,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 6320,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 6445,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 6520,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 6830,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 7195,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 7220,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 7455,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 7475,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 7480,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 7520,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 7580,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 7615,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 7800,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 7895,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8060,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8155,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 8200,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 8325,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 8395,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 8710,
+        "label": "Penalty",
+        "score": 1.0
+      },
+      {
+        "frame": 8835,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8940,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 8960,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 9050,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 9055,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 9235,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 9470,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 9515,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 10245,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 10385,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 10490,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 10595,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 10720,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 10905,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 10930,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 11010,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11125,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 11240,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11320,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 11425,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 11495,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 11520,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11685,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 11750,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 12040,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 12215,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 12240,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 12390,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 12725,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 12980,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 12980,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 13150,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 13205,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 13280,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 13345,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 13575,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 13785,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 13785,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 13790,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 14020,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 13500,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 13635,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 13710,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 13960,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 14125,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 14275,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 14360,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 14540,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 14545,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 14750,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 15135,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15410,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15605,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 15705,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15805,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 16540,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 16540,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 16730,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 16920,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 16945,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 16990,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 17205,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 17625,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 17645,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 17870,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 17975,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 18225,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 18265,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 18545,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 18670,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 18750,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 18755,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 18940,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 19110,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 19115,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 19235,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 19305,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 19360,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 19500,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 19910,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 20070,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 20670,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 20740,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 20845,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 20920,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 21265,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 21290,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 21325,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 21680,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 21840,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 22250,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 22260,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 22365,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 22375,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 22380,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 22545,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 22660,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 22780,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 23025,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 23170,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 23425,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 23500,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 23675,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 23780,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 23855,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 23975,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 24145,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 24460,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 24575,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 24620,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 24780,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 25270,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 25490,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 25560,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 25585,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 25640,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 25675,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 25775,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 26100,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 26275,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 26355,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 26505,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 26585,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 26690,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 26750,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 26870,
+        "label": "Throw-in",
+        "score": 1.0
+      }
+    ]
+  },
+  {
+    "video": "tottenham_leicester_224p_5fps",
+    "num_frames": 26999,
+    "fps": 5.0,
+    "events": [
+      {
+        "frame": 0,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 430,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 635,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 700,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 1135,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1225,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1270,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 1595,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 1715,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 2000,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 2035,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 2145,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 2500,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 2660,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 2685,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 2760,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 2970,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 3070,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 3275,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 3455,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 3770,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 3790,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 3880,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 4045,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 4160,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 4490,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 4860,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 5120,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 5470,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 5725,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 5960,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 5960,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 6100,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 6725,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 6815,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 7175,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 7375,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 7800,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 7930,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8020,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 8525,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8605,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 8685,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 8925,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 8930,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 8990,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 9370,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 9470,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 9645,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 9715,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 10075,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 10105,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 10240,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 10415,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 10520,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 10580,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 10965,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 10965,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 11000,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 11030,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 11255,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11295,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 11370,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11570,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 11580,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 11690,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 11830,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 11910,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 11975,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 12045,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 12260,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 12275,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 12375,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 12620,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 12645,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 12965,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 12965,
+        "label": "Penalty",
+        "score": 1.0
+      },
+      {
+        "frame": 12965,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 13215,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 13320,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 13380,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 13390,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 13500,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 13500,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 13745,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 14110,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 14195,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 14200,
+        "label": "Goal",
+        "score": 1.0
+      },
+      {
+        "frame": 14890,
+        "label": "Kick-off",
+        "score": 1.0
+      },
+      {
+        "frame": 15210,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 15315,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15340,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15475,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15665,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15725,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 15905,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 16035,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 16080,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 16220,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 16330,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 16395,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 16700,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 16700,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 16835,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 17130,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 17180,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 17295,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 17550,
+        "label": "Shot on target",
+        "score": 1.0
+      },
+      {
+        "frame": 17755,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 17885,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 18025,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 18035,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 18150,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 18235,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 18360,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 18515,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 18720,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 18785,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 18885,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 19135,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 19165,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 19335,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 19410,
+        "label": "Offside",
+        "score": 1.0
+      },
+      {
+        "frame": 19465,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 19525,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 19765,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 19850,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 19900,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 20015,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 20260,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 20300,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 20365,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 20420,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 20530,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 20635,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 20810,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 21105,
+        "label": "Direct free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 21105,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 21245,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 21420,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 21515,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 21680,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 21805,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 21935,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 22100,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 22370,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 22515,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 22580,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 22720,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 22825,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 22990,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 23225,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 23310,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 23560,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 23800,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 24015,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 24125,
+        "label": "Clearance",
+        "score": 1.0
+      },
+      {
+        "frame": 24355,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 24610,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 24665,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 24720,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 25055,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 25165,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 25280,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 25520,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 25720,
+        "label": "Corner",
+        "score": 1.0
+      },
+      {
+        "frame": 25775,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 25810,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 25885,
+        "label": "Shot off target",
+        "score": 1.0
+      },
+      {
+        "frame": 25900,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 26035,
+        "label": "Substitution",
+        "score": 1.0
+      },
+      {
+        "frame": 26125,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 26165,
+        "label": "Foul",
+        "score": 1.0
+      },
+      {
+        "frame": 26200,
+        "label": "Yellow card",
+        "score": 1.0
+      },
+      {
+        "frame": 26290,
+        "label": "Indirect free-kick",
+        "score": 1.0
+      },
+      {
+        "frame": 26580,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 26750,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 26825,
+        "label": "Throw-in",
+        "score": 1.0
+      },
+      {
+        "frame": 27000,
+        "label": "Clearance",
+        "score": 1.0
+      }
+    ]
   }
 ]
