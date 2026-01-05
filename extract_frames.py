@@ -36,9 +36,10 @@ def main():
     frames_dir = Path(args.frames_dir)
     frames_dir.mkdir(parents=True, exist_ok=True)
 
-    # video_files = sorted([p for p in videos_dir.iterdir() if p.suffix.lower() in [".mp4", ".mkv", ".mov", ".avi"]])
-    # only take short.mp4 for testing
-    video_files = sorted([p for p in videos_dir.iterdir() if p.name == "short.mp4"])
+    video_files = sorted([
+        p for p in videos_dir.iterdir()
+        if p.suffix.lower() in {".mp4", ".mkv", ".mov", ".avi"}
+    ])
     if not video_files:
         raise FileNotFoundError(f"No videos found in {videos_dir}")
 
