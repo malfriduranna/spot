@@ -33,8 +33,9 @@ def get_args():
         '--label', default='Indirect free-kick',
         help='Target class label to visualize.')
     parser.add_argument(
-        '--output', default='results_figures/soccernet_rgb_indirect_fk.png',
-        help='Destination for the rendered figure.')
+        '--output',
+        help='Destination for the rendered figure. When omitted, a filename '
+             'based on the video, label, and target frame is used.')
     parser.add_argument(
         '--fps', type=float, default=5.0,
         help='Frame rate used for the SoccerNet export.')
@@ -147,6 +148,9 @@ def plot_probabilities(scores, fps, anchor_frame, peak_frame, output_path,
     plt.savefig(output_path, dpi=200)
     plt.close()
 
+def _slugify(value):
+    return ''.join(c if c.isalnum() else '_' for c in value)
+
 
 def main():
     args = get_args()
@@ -157,9 +161,20 @@ def main():
         args.truth_json, args.video, args.label)
     anchor_frame, peak_frame, _ = pick_anchor(
         events, scores, args.fps, args.search_radius, args.target_frame)
+    if args.output:
+        output_path = args.output
+    else:
+        frame_id = args.target_frame if args.target_frame is not None else anchor_frame
+        video_slug = _slugify(args.video)
+        label_slug = _slugify(args.label)
+        os.makedirs('results_figures', exist_ok=True)
+        output_path = os.path.join(
+            'results_figures',
+            f'{video_slug}_{label_slug}_frame{frame_id}.png')
     plot_probabilities(
         scores, args.fps, anchor_frame, peak_frame,
-        args.output, args.smooth, args.window, args.label)
+        output_path, args.smooth, args.window, args.label)
+    print(f'Saved plot to {output_path}')
 
 
 if __name__ == '__main__':
