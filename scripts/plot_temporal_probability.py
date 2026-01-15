@@ -152,6 +152,28 @@ def _slugify(value):
     return ''.join(c if c.isalnum() else '_' for c in value)
 
 
+def build_output_path(args, anchor_frame):
+    frame_id = args.target_frame if args.target_frame is not None else anchor_frame
+    video_slug = _slugify(args.video)
+    label_slug = _slugify(args.label)
+    default_name = f'{video_slug}_{label_slug}_frame{frame_id}.png'
+
+    if not args.output:
+        os.makedirs('results_figures', exist_ok=True)
+        return os.path.join('results_figures', default_name)
+
+    # If --output points to a directory, drop the auto filename inside it.
+    if args.output.endswith(os.sep) or os.path.isdir(args.output):
+        os.makedirs(args.output, exist_ok=True)
+        return os.path.join(args.output, default_name)
+
+    base, ext = os.path.splitext(args.output)
+    if not ext:
+        ext = '.png'
+    os.makedirs(os.path.dirname(args.output) or '.', exist_ok=True)
+    return f'{base}_frame{frame_id}{ext}'
+
+
 def main():
     args = get_args()
 
@@ -161,16 +183,8 @@ def main():
         args.truth_json, args.video, args.label)
     anchor_frame, peak_frame, _ = pick_anchor(
         events, scores, args.fps, args.search_radius, args.target_frame)
-    if args.output:
-        output_path = args.output
-    else:
-        frame_id = args.target_frame if args.target_frame is not None else anchor_frame
-        video_slug = _slugify(args.video)
-        label_slug = _slugify(args.label)
-        os.makedirs('results_figures', exist_ok=True)
-        output_path = os.path.join(
-            'results_figures',
-            f'{video_slug}_{label_slug}_frame{frame_id}.png')
+
+    output_path = build_output_path(args, anchor_frame)
     plot_probabilities(
         scores, args.fps, anchor_frame, peak_frame,
         output_path, args.smooth, args.window, args.label)
