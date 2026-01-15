@@ -22,6 +22,9 @@ def get_args():
         help='Path to the serialized frame-level predictions (required when '
              'plotting class probabilities).')
     parser.add_argument(
+        '--class_file', default='data/soccernetv2/class.txt',
+        help='Path to the class label list (one label per line).')
+    parser.add_argument(
         '--truth_json', default='data/soccernetv2/test.json',
         help='Ground-truth annotations to locate anchor frames.')
     parser.add_argument(
