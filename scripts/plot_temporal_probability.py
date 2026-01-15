@@ -18,11 +18,9 @@ def get_args():
     parser = argparse.ArgumentParser(
         description='Plot per-frame probabilities for a target event.')
     parser.add_argument(
-        '--frame_pkl', default='pretrained/soccernet_rgb/pred-test.140.frame.pkl',
-        help='Path to the serialized frame-level predictions.')
-    parser.add_argument(
-        '--class_file', default='data/soccernetv2/class.txt',
-        help='Path to the class label list (one label per line).')
+        '--frame_pkl',
+        help='Path to the serialized frame-level predictions (required when '
+             'plotting class probabilities).')
     parser.add_argument(
         '--truth_json', default='data/soccernetv2/test.json',
         help='Ground-truth annotations to locate anchor frames.')
@@ -115,7 +113,8 @@ def moving_average(signal, width_frames):
 
 
 def plot_probabilities(scores, fps, anchor_frame, peak_frame, output_path,
-                       smooth_width, window_seconds, label):
+                       smooth_width, window_seconds, label,
+                       include_predictions=True):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     total_frames = len(scores)
@@ -126,24 +125,35 @@ def plot_probabilities(scores, fps, anchor_frame, peak_frame, output_path,
     else:
         start, end = 0, total_frames
 
-    x = np.arange(start, end)
-    y = scores[start:end]
-    if smooth_width and smooth_width > 0:
-        y = moving_average(y, max(1, int(round(smooth_width * fps))))
-
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt  # noqa: E402
 
     plt.figure(figsize=(10, 3))
-    plt.plot(x / fps / 60.0, y, label=f'{label} response')
-    plt.axvline(anchor_frame / fps / 60.0, color='tab:red',
-                linestyle='--', label='Ground-truth anchor')
-    plt.scatter([peak_frame / fps / 60.0], [scores[peak_frame]],
-                color='black', zorder=5, label='Model peak')
+
+    if include_predictions:
+        x = np.arange(start, end)
+        y = scores[start:end]
+        if smooth_width and smooth_width > 0:
+            y = moving_average(y, max(1, int(round(smooth_width * fps))))
+        plt.plot(x / fps / 60.0, y, label=f'{label} response')
+        plt.axvline(anchor_frame / fps / 60.0, color='tab:red',
+                    linestyle='--', label='Ground-truth anchor')
+        plt.scatter([peak_frame / fps / 60.0], [scores[peak_frame]],
+                    color='black', zorder=5, label='Model peak')
+        plt.ylabel('Score')
+    else:
+        plt.style.use('seaborn-whitegrid')
+        plt.axis('off')
+        plt.text(0.5, 0.5,
+                 'Raw frame logits unavailable.\n'
+                 'Plot only supports class-based events '
+                 'with --frame_pkl specified.',
+                 ha='center', va='center')
+
     plt.xlabel('Match time (minutes)')
-    plt.ylabel('Score')
     plt.title('Temporal probability curve')
-    plt.legend(loc='upper right', fontsize=8)
+    if include_predictions:
+        plt.legend(loc='upper right', fontsize=8)
     plt.tight_layout()
     plt.savefig(output_path, dpi=200)
     plt.close()
