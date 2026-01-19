@@ -1,5 +1,7 @@
 # Spotting Temporally Precise, Fine-Grained Events in Video
 
+This repository is used for Malfridur Anna Eiriksdottir's thesis experiments while keeping the original ECCV 2022 implementation intact. The only changes from the upstream repo are (1) a minimal `data/myvideos` split that was used to verify the pipeline on personal recordings and (2) the `results_figures/spotting_spike.png` visualization referenced in the thesis. The upstream codebase and authorship remain fully attributed to the Spotting Temporally Precise, Fine-Grained Events in Video paper described below.
+
 This repository contains code for our paper:
 
 *Spotting Temporally Precise, Fine-Grained Events in Video*\
@@ -26,6 +28,15 @@ This is a useful task for annotating video for analysis and synthesis when tempo
 
 In this regime, the most crucial design aspect is end-to-end learning of spatial-temporal features from the pixels.
 We present a surprisingly strong, compact, and end-to-end learned baseline that is conceptually simpler than the two-phase architectures common in the temporal action detection, segmentation, and spotting literature.
+
+## Thesis context
+
+This fork keeps the original ECCV 2022 implementation intact while adding a few lightweight assets that support Malfridur Anna Eiriksdottir's thesis work:
+
+- `data/myvideos/` holds a minimal dataset configuration (currently just `class.txt` and `test.json`) used to verify that the end-to-end training and inference pipeline works on personal recordings. Replace these files with your own split definitions to spot new classes or practice sessions.
+- `results_figures/spotting_spike.png` is an exported visualization of a predicted event that is referenced in the written thesis.
+
+Everything else remains consistent with the upstream repository so the paper implementation can still be reproduced verbatim.
 
 ## Environment
 
@@ -132,3 +143,23 @@ Predictions are formatted similarly to the labels:
     ...
 ]
 ```
+
+## Thesis helper scripts and SoccerNet testing
+
+All thesis-specific utilities live in [scripts/](scripts):
+
+- `download_test_video.py` grabs a single match from the SoccerNet NDA bucket (supply your own credentials) so the rest of the pipeline can run without fetching the entire dataset.
+- `convert_soccernet_labels.py` rewrites the SoccerNet `Labels-v2.json` annotations for a downloaded match into the `data/<dataset>/<split>.json` format expected by this repo, including clock-to-frame conversion at the extraction FPS.
+- `convert_frame_predictions.py` turns the raw `pred-*.frame.pkl` files dumped by `test_e2e.py` into the JSON / `.recall.json.gz` / `.score.json.gz` artifacts used for evaluation and visualization.
+- `filter_single_video.py` trims both predictions and ground truth to a single video to keep notebooks and plots lightweight.
+- `plot_temporal_probability.py` and `batch_plot_soccernet.py` visualize per-frame logits over time (optionally smoothed) and mark both the ground-truth anchors and the highest-confidence detections, which is helpful when copying figures into the thesis.
+- `cluster/test_e2e_gpu100.bsub` is the DTU compute-cluster submission script used to execute inference runs on an A100 node: it requests 4 CPU cores, 16 GB RAM, one GPU, and a 4‑hour wall clock; loads `python3/3.9.19` and `cuda/12.1`; activates the `~/.virtualenvs/spot` environment; changes into the submission directory; ensures `logs/` exists; and finally runs `python3 test_e2e.py pretrained/soccernet_rgb frames/short_5fps -s test --save -d soccernetv2` while teeing stdout/stderr into `%J.out/.err` so each job’s output can be inspected afterwards.
+
+### How the SoccerNet evaluation was reproduced
+
+1. Downloaded an EPL match with `scripts/download_test_video.py`, extracted frames at 5 FPS to `frames/full_match_5fps/` (using the existing `frames_as_jpg_soccernet.py` helper), and converted its official annotations via `scripts/convert_soccernet_labels.py --video-name <video_id> --frame-dir frames/full_match_5fps --label-file <path-to-Labels-v2.json> --fps 5`.
+2. Ran inference with the released checkpoint in `pretrained/soccernet_rgb` (`python3 test_e2e.py pretrained/soccernet_rgb frames/full_match_5fps -s test --save`) to generate `pred-test.140.frame.pkl`.
+3. Converted those frame-level logits into event JSON/GZ files via `scripts/convert_frame_predictions.py --model-dir pretrained/soccernet_rgb --prefix pred-test.140 --dataset soccernetv2 --frame-dir frames/full_match_5fps --split test`.
+4. Used `scripts/filter_single_video.py --video <video_id>` as needed to isolate the match for qualitative review, and produced the plots that appear in the thesis with `scripts/plot_temporal_probability.py` (or the batch variant for multiple anchors).
+
+These steps verified that the upstream model runs end-to-end on SoccerNet data inside this fork, and the resulting files are what you see under `pretrained/soccernet_rgb/` and `results_figures/`.
