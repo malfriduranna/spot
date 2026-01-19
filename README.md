@@ -163,3 +163,10 @@ All thesis-specific utilities live in [scripts/](scripts):
 4. Used `scripts/filter_single_video.py --video <video_id>` as needed to isolate the match for qualitative review, and produced the plots that appear in the thesis with `scripts/plot_temporal_probability.py` (or the batch variant for multiple anchors).
 
 These steps verified that the upstream model runs end-to-end on SoccerNet data inside this fork, and the resulting files are what you see under `pretrained/soccernet_rgb/` and `results_figures/`.
+
+## Git ignored files
+
+To keep the thesis repo tidy, the `.gitignore` intentionally omits:
+
+- `frames/` and `videos/` directories (aside from the explicitly whitelisted `videos/full_match_trimmed2.mp4`) so raw media and extracted RGB frames never bloat the history.
+- `logs/` because DTU cluster jobs stream stdout/stderr into timestamped files that change every run.
